@@ -1,0 +1,294 @@
+* {
+	margin: 0;
+	font-family:"AppleGothic";
+	/*border: 1px solid black;*/
+}
+
+body {
+	background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;   
+}
+
+@keyframes condemned_blink_effect {
+    0% {
+        visibility: hidden;
+    }
+    50% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+
+.bg {
+	height: 100vh;
+    width: 100vw;
+    position: fixed;
+}
+
+.start {
+	width: 100%;
+	height: 100vh;
+	background-image: url(/img/start.png);
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;   
+    text-align: center;
+}
+
+.title {
+	line-height: 80vh;
+    font-size: 7.5vw;
+    font-family: "Gill Sans";
+    color: white;
+    font-weight: 300;
+}
+
+.get_start {
+	font-family: "New Peninim NT";
+    margin-top: -32vh;
+    font-size: 3vw;
+    color: rgba(228, 223, 223, 0.5);
+    animation: 1s linear infinite condemned_blink_effect;
+}
+
+#canvas {
+	padding-top: 3vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    font-size: 1.55vw;
+    display: none;
+    width: 94%;
+    color: white;
+    height: 26vh;
+    position: fixed;
+    bottom: 0px;
+    font-family: monospace;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#canvas p {
+	color: white;
+    font-size: 2vw;
+}
+
+#clickable_object {
+    opacity: 0;
+}
+
+#show_place {
+    opacity: 0.5;
+}
+
+.to_corpse {
+    position: fixed;
+    top: 69vh;
+    width: 16vw;
+    height: 10vh;
+    border-radius: 30px;
+    left: 3vw;
+}
+
+.to_chair {
+    position: fixed;
+    top: 68vh;
+    width: 17vw;
+    height: 31vh;
+    border-radius: 30px;
+    left: 19vw;
+}
+
+.to_window {
+    position: fixed;
+    top: 21vh;
+    width: 18vw;
+    height: 47vh;
+    border-radius: 30px;
+    left: 4vw;
+}
+
+.to_reasoning{
+    position: fixed;
+    top: 23vh;
+    width: 18vw;
+    height: 47vh;
+    border-radius: 30px;
+    right: -2vw;
+}
+
+.left_sus {
+    position: fixed;
+    width: 33vw;
+    height: 75vh;
+    top: 8vh;
+}
+
+.mid_sus {
+    top: 8vh;
+    position: fixed;
+    width: 33vw;
+    height: 75vh;
+    left: 33.5vw;
+}
+
+.right_sus {
+    top: 8vh;
+    position: fixed;
+    width: 33vw;
+    height: 75vh;
+    right: 0;
+}
+
+.suspect_title {
+    font-family: monospace;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    line-height: 8vh;
+    font-size: 3vw;
+}
+
+.suspect_name {
+    width: 33vw;
+    position: fixed;
+    color: white;
+    text-align: center;
+    height: 17vh;
+    bottom: 0;
+    line-height: 17vh;
+    font-size: 3.5vw;
+    font-family: black;
+}
+
+.character {
+    position: fixed;
+    left: 30vw;
+    width: 40vw;
+    height: 62vh;
+    top: 5vh;
+}
+
+#reasoning {
+    display: none;
+    background: white;
+    width: 40vw;
+    position: fixed;
+    height: 30vh;
+    left: 30vw;
+    top: 30vh;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.question {
+    margin-top: 6vh;
+    font-size: 2vw;
+    width: 30vw;
+    margin-left: 5vw;
+}
+
+.answer {
+    color: red;
+    margin-top: 2vh;
+}
+
+
+#left_div {
+    display: none;
+    position: fixed;
+    background: white;
+    height: 92vh;
+    top: 8vh;
+    text-align: center;
+    width: 27vw;
+    line-height: 6.5vh;
+}
+
+.clues {
+    border-style: ridge;
+    margin-top: 0.9vh;
+}
+
+#right_div {
+    display: none;
+    position: fixed;
+    background: #ea958ffa;
+    right: 0;
+    top: 8vh;
+    width: 73vw;
+    height: 92vh;
+}
+
+.clue {
+    text-align: center;
+    height: 7vh;
+    line-height: 7vh;
+    font-family: black;
+    font-size: 2vw;
+}
+
+.clue_info {
+    margin-left: 2vw;
+    margin-top: 2vh;
+    margin-right: 2vw;
+}
+
+.clue_img {
+    width: 100%;
+    height: 60%;
+}
+
+.confirm {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    line-height: 6vh;
+    height: 6vh;
+    width: 9vw;
+    text-align: center;
+    background: #e2e1e1;
+    border-radius: 6px;
+    border-style: outset;
+}
+
+
+.sub_form {
+	display: none;
+    position: fixed;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 34vw;
+    height: 50vh;
+    left: 33vw;
+    top: 10vh;
+    color: white;
+}
+
+.name_input {
+	border: none;
+    width: 18vw;
+    height: 5vh;
+    font-size: 1.5vw;
+    text-align: center;
+    position: absolute;
+    left: 8vw;
+    top: 14vh;
+}
+
+.submit_form {
+	border: none;
+    position: absolute;
+    left: 12vw;
+    top: 24vh;
+    width: 10vw;
+    height: 4vh;
+    background: none;
+    line-height: 4vh;
+    color: snow;
+    font-size: 1.5vw;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="js/load.js"></script>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/jquery-1.12.4.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <link rel="stylesheet" type="text/css" href="js/index.css"></link>
+
+</head>
+
+<body>
+
+<div class="start" id="start_sec">
+
+</div>
+
+<div id="bg_div" class="bg">
+</div>
+
+<div id="reasoning">
+	<p class="question">Do you want to start your reasoning of the case?</p>
+	<p onclick="chooseSuspect()" class="answer">yes</p>
+	<p onclick="back()" class="answer">no</p>
+</div>
+
+<div id="canvas">
+</div>
+
+<div id="left_div"></div>
+<div id="right_div"></div>
+
+<div class="sub_form" id="form_sec">
+	<form id="form">
+	    <input type="text" class="name_input" placeholder="Name" name="username" id="user"></br>
+	</form>
+	<button class="submit_form" onclick="submitForm()">Submit</button>
+</div>
+
+</body>
+</html>
